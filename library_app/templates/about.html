@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>About US</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel='stylesheet' href="{% static 'css/style.css'%}">
+  </head>
+  <body>
+    <header>
+        <h1>Welcome to Our Library</h1>
+        <nav>
+          <ul>
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li><a href="{% url "books" %}">Books</a></li>
+            <li><a href="{% url "about" %}">About</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="about-container">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget magna libero. 
+            Sed a metus magna. Sed vel vestibulum lorem. Duis luctus scelerisque metus, nec tempor 
+            nunc pharetra sed. Nam tristique auctor nulla in cursus. Nam sollicitudin orci nec leo 
+            consectetur aliquet.</p>
+            <p>Morbi suscipit libero velit, sed elementum lorem feugiat id. Duis tristique est 
+            eget leo maximus, vitae ullamcorper risus pulvinar. Vivamus consequat turpis nec nibh 
+            fermentum, nec mattis enim posuere.</p>
+            <p>For more information, visit our <a href="{% url "home" %}">website</a>.</p>
+        </div>
+    </div>
+
+      <footer>
+        <p>&copy; 2024 Library App. All rights reserved.</p>
+      </footer>
+  </body>
+</html>

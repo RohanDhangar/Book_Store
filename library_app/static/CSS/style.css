@@ -1,0 +1,190 @@
+// home
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+#h2{
+    text-align:center;
+    font-size:50px;  
+}
+
+header {
+  margin-bottom: 75px;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  background-image: linear-gradient(to right, #00004d, #1a1aff);
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Set button background color */
+  color: #fff; /* Set button text color */
+  text-decoration: none;
+  border-radius: 4px; /* Add border radius for rounded corners */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Change button background color on hover */
+}
+
+footer {
+  margin-top: 75px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+
+// contact us 
+
+.contact-form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+// about us 
+.about-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Ensure container fills the viewport */
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    margin-left:297px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
+
+// books 
+
+.books-main-container {
+    display: flex;
+    justify-content: center; /* Center books horizontally */
+}
+
+.books-container {
+    margin-left:140px;
+    display: flex;
+    flex-wrap: wrap; /* Allow books to wrap to the next line */
+    justify-content: space-around; /* Add space between books */
+    padding: 20px;
+    max-width: 1200px; /* Limit the width of the container */
+}
+
+
+.book-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(25% - 20px); /* Set the width to a quarter of the container minus margins */
+    max-width: 300px; /* Set a maximum width for better responsiveness */
+    text-align: center; /* Center the content horizontally */
+}
+
+.book-card h2 {
+    margin-top: 0;
+}

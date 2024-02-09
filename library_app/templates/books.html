@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Books</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel='stylesheet' href="{% static 'css/style.css'%}">
+  </head>
+  <body>
+    <header>
+        <h1>Welcome to Our Library</h1>
+        <nav>
+          <ul>
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li><a href="{% url "books" %}">Books</a></li>
+            <li><a href="{% url "about" %}">About</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h2 id='h2'>Book Store</h2>
+      <div class="books-main-container">
+      <div class="books-container">
+        {% comment %} Hello {% endcomment %}
+        {% for book in books %}
+        <div class="book-card">
+            <h2>{{ book.title }}</h2>
+            <p><strong>Author:</strong> {{ book.Author }}</p>
+            <p><strong>Price:</strong> ${{ book.price }}</p>
+            <p><strong>Availability:</strong> {% if book.availability == 'Yes' %} Available {% else %} Not Available {% endif %}</p>
+            <p><strong>Subject:</strong> {{ book.subject }}</p>
+            <p><strong>Ratings:</strong> {{ book.rating }}</p>
+            <a href="#" class="btn">{% if book.purchese == 'Yes' %} Buy Now {% else %} Not Available {% endif %}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+      <footer>
+        <p>&copy; 2024 Library App. All rights reserved.</p>
+      </footer>
+  </body>
+</html>

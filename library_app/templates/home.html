@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel='stylesheet' href="{% static 'css/style.css'%}">
+  </head>
+  <body>
+      <header>
+        <h1>Welcome to Our Library</h1>
+        <nav>
+          <ul>
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li><a href="{% url "books" %}">Books</a></li>
+            <li><a href="{% url "about" %}">About</a></li>
+            <li><a href="{% url "contact" %}">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h2 id='h2'>Top Selling Books</h2>
+      <section class="books-main-container">
+        <div class="books-container">
+            <div class="book-card">
+                <h2>Title: {{ book1.title }}</h2>
+                <p>Author: {{ book1.author }}</p>
+                <p>Subject: {{ book1.subject }}</p>
+                <a href="#" class="btn">Browse Books</a>
+            </div>   
+            <div class="book-card">
+                <h2>Title: {{ book2.title }}</h2>
+                <p>Author: {{ book2.author }}</p>
+                <p>Subject: {{ book2.subject }}</p>
+                <a href="#" class="btn">Browse Books</a>
+            </div>  
+            <div class="book-card">
+                <h2>Title: {{ book3.title }}</h2>
+                <p>Author: {{ book3.author }}</p>
+                <p>Subject: {{ book3.subject }}</p>
+                <a href="#" class="btn">Browse Books</a>
+            </div>
+            <div class="book-card">
+                <h2>Title: {{ book4.title }}</h2>
+                <p>Author: {{ book4.author }}</p>
+                <p>Subject: {{ book4.subject }}</p>
+                <a href="#" class="btn">Browse Books</a>
+            </div>            
+        </div>
+    </section>
+    
+      <footer>
+        <p>&copy; 2024 Library App. All rights reserved.</p>
+      </footer>
+  </body>
+</html>
